@@ -22,10 +22,12 @@
     $.ajax({
     /* body... */
     url: 'http://lev-anton.github.io/AJAX/main.html',
-    success: function(data){
+    success: function(data,second){
+      console.log(argument);
       console.log(data);
+      console.log(second);
       alert("Load was performed");
-      $('.main-content').html();
+      $('.main-content').html(data);
     }
   });
   });
