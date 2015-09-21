@@ -11,30 +11,29 @@
   </head>
   <body>
 
-
+<button class="button"> click click</button>
 
 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>  
 <script type="text/javascript">
-  $(function (){
+  $(document).ready(function(){
 
 $('button').on('click',function(){
 
     $.ajax({
     /* body... */
     url: 'http://lev-anton.github.io/AJAX/main.html',
-    success: function(argument,data,second){
-      console.log(argument);
-      console.log(data);
-      console.log(second);
-      alert("Load was performed");
+      cache:false,
+   success: function(data){  
+                     
       $('.main-content').html(data);
     }
   });
   });
-  });
+ });
+
 </script>
   </body>
 </html>
