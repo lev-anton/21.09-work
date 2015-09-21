@@ -18,7 +18,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>  
 <script type="text/javascript">
-  $(function  (){
+  $(function (){
+
+$('button').on('click',function(){
+
     $.ajax({
     /* body... */
     url: 'http://lev-anton.github.io/AJAX/main.html',
@@ -29,6 +32,7 @@
       alert("Load was performed");
       $('.main-content').html(data);
     }
+  });
   });
   });
 </script>
